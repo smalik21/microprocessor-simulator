@@ -49,6 +49,7 @@ public class FlagRegister {
     }
 
     public void updateFlags(int result) {
+        result &= 0xFF;
         setSign((result & 0x80) != 0);                  // Sign bit check (MSB)
         setZero(result == 0);                           // Zero flag
         setParity(Integer.bitCount(result) % 2 == 0);   // Even parity

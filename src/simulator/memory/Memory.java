@@ -1,17 +1,17 @@
 package simulator.memory;
 
 public class Memory {
-    private final int[] memory;
+    private final String[] memory;
 
     public Memory() {
-        memory = new int[65536];
+        memory = new String[65536];
     }
 
-    public void setMemory(int index, int value) {
+    public void setMemory(int index, String value) {
         this.memory[index] = value;
     }
 
-    public int getMemory(int index) {
+    public String getMemory(int index) {
         return this.memory[index];
     }
 }
