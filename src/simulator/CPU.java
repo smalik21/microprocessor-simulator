@@ -16,11 +16,24 @@ public class CPU {
     private int programCounter;
 
     public CPU() {
+        reset();
+    }
+
+    public void reset() {
         programCounter = 0x8000;
         registers = new Register();
         memory = new Memory();
         parser = new InstructionParser(memory, programCounter);
         executor = new InstructionExecutor(memory, registers, programCounter);
+    }
+
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public Register getRegisters() {
+        return registers;
     }
 
     public String[] processInput(String input) {

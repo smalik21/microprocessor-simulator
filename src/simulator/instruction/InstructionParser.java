@@ -80,7 +80,7 @@ public class InstructionParser {
 
     // Placeholder function to validate memory addresses (e.g., 7000H)
     private boolean isValidMemoryAddress(String operand) {
-        return operand.matches("[0-7A-Fa-f]{1,4}H");
+        return operand.matches("[0-9A-Fa-f]{1,4}H");
     }
 
     // Placeholder function to validate immediate values (e.g., 3EH)
